@@ -1,0 +1,90 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+body {
+  height: 800px;
+  font-family: Share Tech Mono;
+}
+
+.calculator {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  width: 300px;
+  height: 400px;
+  display: grid;
+  grid-template-areas:
+    "d d d d"
+    "c c c c"
+    "c c c c"
+    "c c c c"
+    "c c c c";
+  background: #696969;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#display {
+  grid-area: d;
+  position: relative;
+  top: 18px;
+  height: 60px;
+  outline: 1px solid black;
+  background: white;
+  text-align: right;
+  padding-right: 5px;
+}
+
+#d1 {
+  position: relative;
+  top: 3px;
+  font-size: 18px;
+}
+
+#d2 {
+  position: absolute;
+  top: 28px;
+  width: 100%;
+  padding-right: 5px;
+  font-size: 23px;
+}
+
+ul {
+  list-style-type: none;
+  grid-area: c;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  height: 90%;
+  width: 250px;
+  align-self: end;
+  font-size: 18px;
+}
+
+li {
+  position: relative;
+  right: 40px;
+  width: 66.5px;
+  padding-top: 15px;
+  text-align: center;
+  border: 1px solid black;
+  background: white;
+  border-radius: 10px;
+}
+
+#divide, #multiply, #subtract, #add, #equals {
+  background: #FFA500;
+}
+
+#opening-parenthesis, #closing-parenthesis {
+  background: #B0E0E6;
+}
+
+#clear, #backspace {
+  background: #FA8072;
+}
+
+li:hover {
+  font-weight: bold;
+  border: 1px solid white;
+  z-index: 1;
+}
